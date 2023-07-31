@@ -1,0 +1,13 @@
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven
+/target
+
+# liquibase settings
+/liquibase/liquibase.properties

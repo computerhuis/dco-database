@@ -1,0 +1,17 @@
+version: '3'
+
+volumes:
+  data:
+
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+      MYSQL_DATABASE: dhwco
+      MYSQL_USER: dco
+      MYSQL_PASSWORD: dcopwd
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - '127.0.0.1:3306:3306'
