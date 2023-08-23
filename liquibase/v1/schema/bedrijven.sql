@@ -2,8 +2,8 @@
 -- changeset ronlievens:schema-1
 CREATE TABLE bedrijven
 (
-    nr                   BIGINT                  NOT NULL AUTO_INCREMENT,
-    naam                 VARCHAR(255)            NOT NULL,
+    nr            BIGINT                 NOT NULL AUTO_INCREMENT,
+    naam          VARCHAR(255)           NOT NULL,
     email                VARCHAR(255),
     telefoon             VARCHAR(10),
 
@@ -18,8 +18,8 @@ CREATE TABLE bedrijven
     website              VARCHAR(2048),
 
     opmerkingen          TEXT,
-    ingeschreven         TIMESTAMP DEFAULT NOW() NOT NULL,
-    uitgeschreven        TIMESTAMP,
+    ingeschreven  DATETIME DEFAULT NOW() NOT NULL,
+    uitgeschreven DATETIME,
     msaccess             JSON,
     CONSTRAINT bedrijven_pk PRIMARY KEY (nr),
     CONSTRAINT bedrijven_fk_1 FOREIGN KEY (postcode) REFERENCES postcodes (code) ON UPDATE RESTRICT ON DELETE CASCADE

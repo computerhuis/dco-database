@@ -2,11 +2,11 @@
 -- changeset ronlievens:schema-1
 CREATE TABLE personen
 (
-    nr                   BIGINT                  NOT NULL AUTO_INCREMENT,
+    nr            BIGINT                 NOT NULL AUTO_INCREMENT,
     voorletters          VARCHAR(255),
-    voornaam             VARCHAR(255)            NOT NULL,
+    voornaam      VARCHAR(255)           NOT NULL,
     tussenvoegsels       VARCHAR(255),
-    achternaam           VARCHAR(255)            NOT NULL,
+    achternaam    VARCHAR(255)           NOT NULL,
     geboortedatum        DATE,
 
     email                VARCHAR(255),
@@ -20,8 +20,8 @@ CREATE TABLE personen
     woonplaats           VARCHAR(1024),
 
     opmerkingen          TEXT,
-    ingeschreven         TIMESTAMP DEFAULT now() NOT NULL,
-    uitgeschreven        TIMESTAMP,
+    ingeschreven  DATETIME DEFAULT now() NOT NULL,
+    uitgeschreven DATETIME,
     msaccess             JSON,
     CONSTRAINT personen_pk PRIMARY KEY (nr),
     CONSTRAINT personen_fk_1 FOREIGN KEY (postcode) REFERENCES postcodes (code) ON UPDATE RESTRICT ON DELETE CASCADE

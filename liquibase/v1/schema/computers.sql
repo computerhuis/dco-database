@@ -2,14 +2,14 @@
 -- changeset ronlievens:schema-1
 CREATE TABLE computers
 (
-    nr           BIGINT                  NOT NULL AUTO_INCREMENT,
-    ingeboekt    TIMESTAMP DEFAULT NOW() NOT NULL,
-    uitboekt     TIMESTAMP,
+    nr           BIGINT                 NOT NULL AUTO_INCREMENT,
+    ingeboekt    DATETIME DEFAULT NOW() NOT NULL,
+    uitboekt     DATETIME,
     type         ENUM ('desktop', 'laptop'),
 
-    fabrikant    VARCHAR(255)            NOT NULL,
+    fabrikant    VARCHAR(255)           NOT NULL,
     model        VARCHAR(255),
-    specificatie JSON                    NOT NULL,
+    specificatie JSON                   NOT NULL,
 
     persoon_nr   BIGINT,
     bedrijf_nr   BIGINT,
