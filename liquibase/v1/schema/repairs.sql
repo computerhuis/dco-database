@@ -7,7 +7,7 @@ CREATE TABLE repairs
     repair_type      ENUM ('reparatie', 'uitgifte') NOT NULL,
     status           ENUM ('klant_gebeld', 'in_behandeling', 'in_de_wacht', 'klaar', 'opgehaald'),
     computer_id      BIGINT,
-    omschrijving     JSON,
+    description JSON,
 
     check_in_by      BIGINT                         NOT NULL,
     check_in_date    DATETIME DEFAULT NOW()         NOT NULL,

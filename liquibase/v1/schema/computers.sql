@@ -11,12 +11,12 @@ CREATE TABLE computers
     model         VARCHAR(255),
     specification JSON                   NOT NULL,
 
-    person_nr     BIGINT,
-    company_nr    BIGINT,
+    person_id  BIGINT,
+    company_id BIGINT,
 
     CONSTRAINT computers_pk PRIMARY KEY (id),
-    CONSTRAINT computers_fk_1 FOREIGN KEY (person_nr) REFERENCES persons (id) ON UPDATE RESTRICT ON DELETE CASCADE,
-    CONSTRAINT computers_fk_2 FOREIGN KEY (company_nr) REFERENCES companies (id) ON UPDATE RESTRICT ON DELETE CASCADE
+    CONSTRAINT computers_fk_1 FOREIGN KEY (person_id) REFERENCES persons (id) ON UPDATE RESTRICT ON DELETE CASCADE,
+    CONSTRAINT computers_fk_2 FOREIGN KEY (company_id) REFERENCES companies (id) ON UPDATE RESTRICT ON DELETE CASCADE
 );
-CREATE INDEX computers_i_1 ON computers (person_nr);
-CREATE INDEX computers_i_2 ON computers (company_nr);
+CREATE INDEX computers_i_1 ON computers (person_id);
+CREATE INDEX computers_i_2 ON computers (company_id);

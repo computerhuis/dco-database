@@ -12,5 +12,5 @@ CREATE TABLE postal_codes
     city             VARCHAR(1024) NOT NULL,
     municipality     VARCHAR(1024) NOT NULL,
     province         VARCHAR(1024) NOT NULL,
-    CONSTRAINT postcodes_pk PRIMARY KEY (code)
+    CONSTRAINT postal_codes_pk PRIMARY KEY (code)
 );
