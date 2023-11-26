@@ -1,22 +1,22 @@
 databaseChangeLog:
   - include:
       relativeToChangelogFile: true
-      file: schema/activiteiten.sql
+      file: schema/activities.sql
   - include:
       relativeToChangelogFile: true
-      file: schema/personen.sql
+      file: schema/persons.sql
   - include:
       relativeToChangelogFile: true
-      file: schema/bedrijven.sql
+      file: schema/companies.sql
   - include:
       relativeToChangelogFile: true
       file: schema/computers.sql
   - include:
       relativeToChangelogFile: true
-      file: schema/tijdregistraties.sql
+      file: schema/time_registrations.sql
   - include:
       relativeToChangelogFile: true
-      file: schema/werkzaamheden.sql
+      file: schema/repairs.sql
   - include:
       relativeToChangelogFile: true
-      file: schema/werkzaamheden_log.sql
+      file: schema/repair_log.sql
